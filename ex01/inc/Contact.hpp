@@ -5,14 +5,14 @@
 class Contact
 {
 	public:
-		// Contact(void);
-
-		Contact(std::string _firstName, std::string _lastName,
-				std::string _nickname, std::string _phoneNumber,
-				std::string _darkestSecret);
-
-
+		Contact(void);
 		~Contact(void);
+
+		// Contact(std::string _firstName, std::string _lastName,
+		// 		std::string _nickname, std::string _phoneNumber,
+		// 		std::string _darkestSecret);
+
+
 
 		// void		add(std::string _firstName, std::string _lastName,
 		// 				std::string _nickname, std::string _phoneNumber,
