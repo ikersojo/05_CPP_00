@@ -6,27 +6,25 @@
 #    By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/20 19:11:30 by isojo-go          #+#    #+#              #
-#    Updated: 2023/05/20 19:38:06 by isojo-go         ###   ########.fr        #
+#    Updated: 2023/05/20 19:29:13 by isojo-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # --- Makefile structure ---
 
 ## Program Name:
-NAME	=	agenda
+NAME	=	libclasses.a
 EXT		=	.cpp
 
 ## Folder Structure:
 SRCDIR		=	src
 OBJDIR		=	obj
-BINDIR		=	bin
 
-## Libraries / Classes:
-LIBCLASS	=	./classes
-LIBS		=	$(LIBCLASS)/libclasses.a
+## Libraries:
+LIBS	=	# N/A
 
 ## Header Files (dedicated and from libraries):
-HEADERS	=	-I ./inc -I $(LIBCLASS)/inc
+HEADERS	=	-I ./inc
 
 ## Source / Object Files:
 SRC		=	$(wildcard $(SRCDIR)/*$(EXT))
@@ -35,6 +33,7 @@ OBJ		=	$(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)/%.o)
 
 ## Compilation flags:
 CC			=	c++
+AR			=	ar rcs
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
 
@@ -59,9 +58,8 @@ WHITE = \033[0;97m
 
 all:		$(NAME)
 
-$(NAME):	libclasses $(OBJ)
-			@mkdir -p $(BINDIR)
-			@$(CC) $(CFLAGS) $(OBJ) $(LIBS) $(HEADERS) -o ./$(BINDIR)/$(NAME)
+$(NAME):	$(OBJ)
+			@$(AR) $(NAME) $(OBJ)
 			@echo "$(GREEN)$(NAME) compiled!$(DEF_COLOR)"
 
 $(OBJDIR)/%.o: $(SRCDIR)/%$(EXT)
@@ -70,23 +68,18 @@ $(OBJDIR)/%.o: $(SRCDIR)/%$(EXT)
 			@$(CC) $(CFLAGS) -o $@ -c $< $(HEADERS)
 			@echo "$(GREEN)Done!$(DEF_COLOR)"
 
-libclasses:
-			@$(MAKE) -C $(LIBCLASS)
-
 clean:
 			@$(RM) $(OBJ) $(OBJDIR)
 			@echo "$(YELLOW)$(NAME) object files removed!$(DEF_COLOR)"
-			@$(MAKE) -C $(LIBCLASS) clean
 
 fclean:
-			@$(MAKE) -C $(LIBCLASS) fclean
 			@if [ -d $(OBJDIR) ]; then \
 				$(RM) $(OBJ) $(OBJDIR); \
 				echo "$(YELLOW)$(NAME) object files removed!$(DEF_COLOR)"; \
 			fi
-			@$(RM) $(NAME) $(BINDIR)
+			@$(RM) $(NAME)
 			@echo "$(RED)$(NAME) removed!$(DEF_COLOR)"
 
 re:			fclean all
 
-.PHONY:		all clean fclean re libclasses
+.PHONY:		all clean fclean re
