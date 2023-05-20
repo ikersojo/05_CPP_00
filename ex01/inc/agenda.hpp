@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   agenda.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/20 19:02:03 by isojo-go          #+#    #+#             */
-/*   Updated: 2023/05/20 19:02:07 by isojo-go         ###   ########.fr       */
+/*   Created: 2023/05/20 18:53:27 by isojo-go          #+#    #+#             */
+/*   Updated: 2023/05/20 18:54:47 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
-# define MAX_CONTACTS 8
+#ifndef AGENDA_HPP
+# define AGENDA_HPP
+
 # include <iostream>
-# include "../inc/Contact.hpp"
+# include <string>
+# include "../inc/PhoneBook.hpp"
 
-class PhoneBook
-{
-	public:
-		PhoneBook(void);
-		~PhoneBook(void);
-
-		void	addContact(void);
-		void	list(void);
-
-	private:
-		int		_contactIndex;
-		int		_maxContacts;
-		int		_contactsToPrint;
-		Contact contacts[MAX_CONTACTS];
-};
-
-#endif // PHONEBOOK_HPP
+#endif // AGENDA_HPP

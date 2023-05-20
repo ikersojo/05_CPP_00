@@ -1,38 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/20 18:55:27 by isojo-go          #+#    #+#             */
+/*   Updated: 2023/05/20 18:56:20 by isojo-go         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
-#include <string>
+# include <string>
+# include <iostream>
+# include <iomanip>
 
 class Contact
 {
 	public:
 		Contact(void);
 		~Contact(void);
-
-		// Contact(std::string _firstName, std::string _lastName,
-		// 		std::string _nickname, std::string _phoneNumber,
-		// 		std::string _darkestSecret);
-
-
-
-		// void		add(std::string _firstName, std::string _lastName,
-		// 				std::string _nickname, std::string _phoneNumber,
-		// 				std::string _darkestSecret);
-
-		// void		add(void);
-		// void		search(void);
-	
-		// void		setFirstName(std::string str);
-		// void		setLastName(std::string str);
-		// void		setNickname(std::string str);
-		// void		setPhoneNumber(std::string str);
-		// void		setDarkestSecret(std::string str);
-
-		// int			getIndex(void) const;
-		// std::string	getFirstName(void) const;
-		// std::string	getLastName(void) const;
-		// std::string	getNickname(void) const;
-		// std::string	getPhoneNumber(void) const;
-		// std::string	getDarkestSecret(void) const;
+		void	add(int contactIndex);
+		void	printInList(void);
+		void	printDetails(void);
 
 	private:
 		int			_index;
@@ -41,10 +32,6 @@ class Contact
 		std::string	_nickname;
 		std::string	_phoneNumber;
 		std::string	_darkestSecret;
-
-		static int	_classIndex;
-
-		void		setIndex(int);
-
 };
+
 #endif // CONTACT_HPP
