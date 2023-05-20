@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 # 05_CPP_00
-05_CPP_00
-=======
-# 05_CPP00
+---
 
 ## Introducción:
 El objetivo de estos módulos es presentarte la Programación orientada a objetos.
@@ -39,15 +36,3 @@ estándar C++98.
 ...
 #endif  // FOO_BAR_BAZ_H_
 ```
-
----
-# INFORMATION
-
-## Orthodox canonical class form
-In C++98 (and C++03) the OCCF had four different methods that the C++ compiler is willing to generate:
-
-- Default constructor
-- Copy constructor
-- Destructor
-- Copy assignment operator
->>>>>>> 5b887af (update)

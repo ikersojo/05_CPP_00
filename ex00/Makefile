@@ -1,3 +1,14 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/05/20 19:11:35 by isojo-go          #+#    #+#              #
+#    Updated: 2023/05/20 19:11:46 by isojo-go         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 # --- Makefile structure ---
 
@@ -23,7 +34,7 @@ OBJ		=	$(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)/%.o)
 
 ## Compilation flags:
 CC			=	c++
-CFLAGS		=	-Wall -Wextra -Werror #-g3 -fsanitize=address
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
 
 # *************************************************************************** #
