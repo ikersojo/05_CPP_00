@@ -6,13 +6,13 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 19:06:04 by isojo-go          #+#    #+#             */
-/*   Updated: 2023/05/20 19:06:06 by isojo-go         ###   ########.fr       */
+/*   Updated: 2023/05/21 10:31:24 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/agenda.hpp"
 
-std::string	getUserInput(void)
+static std::string	getUserInput(void)
 {
 	std::string	input;
 

@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 19:02:00 by isojo-go          #+#    #+#             */
-/*   Updated: 2023/05/20 19:08:18 by isojo-go         ###   ########.fr       */
+/*   Updated: 2023/05/21 10:31:24 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	PhoneBook::addContact(void)
 }
 
 // Aux function to check if the string provided is a number
-bool	isPosInt(std::string str)
+static bool	isPosInt(std::string str)
 {
 	size_t	i;
 

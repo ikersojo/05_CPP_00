@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 18:54:13 by isojo-go          #+#    #+#             */
-/*   Updated: 2023/05/20 18:59:53 by isojo-go         ###   ########.fr       */
+/*   Updated: 2023/05/21 10:31:24 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	Contact::add(int contactIndex)
 }
 
 // Returnes a trimmed string if is longer than 10 characters
-std::string	trimString(std::string str)
+static std::string	trimString(std::string str)
 {
 	std::string	trimmed;
 	size_t		i;

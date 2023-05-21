@@ -2,11 +2,8 @@
 ---
 
 ## Introducción:
-El objetivo de estos módulos es presentarte la Programación orientada a objetos.
-Este será el puto de partida de tu viaje en C++. Hay muchas opciones para aprender
-POO. Decidimos elegir C++ ya que se deriva de tu viejo amigo C y para mantener las
-cosas simples, debido a la complejidad del lenguaje tu código deberá compilar con el
-estándar C++98.
+The goal of these modules is to introduce you to Object-Oriented Programming. This will be the starting point of your C++ journey. Many languages are recommended to learn OOP. We decided to choose C++ since it’s derived from your old friend C. Because this is a complex language, and in order to keep things simple, your code will comply with the C++98 standard.
+
 
 ## General Instructions
 - Unless otherwise specified, always en with '\n'.
