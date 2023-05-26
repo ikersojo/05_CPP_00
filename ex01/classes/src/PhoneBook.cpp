@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: isojo-go <isojo-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 19:02:00 by isojo-go          #+#    #+#             */
-/*   Updated: 2023/05/21 10:31:24 by isojo-go         ###   ########.fr       */
+/*   Updated: 2023/05/26 10:29:00 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	PhoneBook::list(void)
 		contacts[i].printInList();
 	std::cout << std:: endl << "Please, select the index for details: ";
 	std::getline(std::cin, opt);
-	if (isPosInt(opt) && std::stoi(opt) >= 0 && std::stoi(opt) <= this->_contactsToPrint)
+	if (opt != "" && isPosInt(opt) && std::stoi(opt) >= 0 && std::stoi(opt) <= this->_contactsToPrint)
 		contacts[std::stoi(opt)].printDetails();
 	else
 		std::cout << "\033[0;31mNot a valid option!\033[0;39m" << std::endl;
